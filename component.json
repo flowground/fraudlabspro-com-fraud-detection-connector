@@ -1,0 +1,69 @@
+{
+    "title": "FraudLabs Pro Fraud Detection",
+    "description": "Online payment fraud detection service. It helps merchants to minimize chargebacks and therefore maximize the revenue. It can be used to detect fraud for various kinds of payment method, such as credit card, paypal, cod and so on. Please visit https://www.fraudlabspro.com to learn more.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/fraudlabspro.com/fraud-detection/1.1/openapi.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.fraudlabspro.com - FraudLabs Pro",
+                    "https://virtserver.swaggerhub.com/fraudlabspro/fraudlabspro/1.0 - SwaggerHub API Auto Mocking",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "post_v1_order_feedback": {
+            "main": "./lib/actions/post_v1_order_feedback.js",
+            "title": "Feedback the status of an order transaction.",
+            "description": "Feedback the status of an order transaction.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_v1_order_feedback.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_v1_order_screen": {
+            "main": "./lib/actions/post_v1_order_screen.js",
+            "title": "Screen order for payment fraud.",
+            "description": "Screen order for payment fraud.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_v1_order_screen.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

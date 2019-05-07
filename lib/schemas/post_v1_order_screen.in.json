@@ -1,0 +1,110 @@
+{
+    "type": "object",
+    "properties": {
+        "ip": {
+            "required": true,
+            "type": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "format": {
+            "enum": [
+                "json",
+                "xml"
+            ],
+            "type": "string"
+        },
+        "last_name": {
+            "type": "string"
+        },
+        "first_name": {
+            "type": "string"
+        },
+        "bill_addr": {
+            "type": "string"
+        },
+        "bill_city": {
+            "type": "string"
+        },
+        "bill_state": {
+            "type": "string"
+        },
+        "bill_country": {
+            "type": "string"
+        },
+        "bill_zip_code": {
+            "type": "string"
+        },
+        "ship_addr": {
+            "type": "string"
+        },
+        "ship_city": {
+            "type": "string"
+        },
+        "ship_state": {
+            "type": "string"
+        },
+        "ship_country": {
+            "type": "string"
+        },
+        "ship_zip_code": {
+            "type": "string"
+        },
+        "email_domain": {
+            "type": "string"
+        },
+        "user_phone": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "email_hash": {
+            "type": "string"
+        },
+        "username_hash": {
+            "type": "string"
+        },
+        "password_hash": {
+            "type": "string"
+        },
+        "bin_no": {
+            "type": "string"
+        },
+        "card_hash": {
+            "type": "string"
+        },
+        "avs_result": {
+            "type": "string"
+        },
+        "cvv_result": {
+            "type": "string"
+        },
+        "user_order_id": {
+            "type": "string"
+        },
+        "user_order_memo": {
+            "type": "string"
+        },
+        "amount": {
+            "type": "number"
+        },
+        "quantity": {
+            "type": "integer"
+        },
+        "currency": {
+            "type": "string"
+        },
+        "department": {
+            "type": "string"
+        },
+        "payment_mode": {
+            "type": "string"
+        },
+        "flp_checksum": {
+            "type": "string"
+        }
+    }
+}
